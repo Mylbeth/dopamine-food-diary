@@ -450,3 +450,35 @@ body {
   font-style: italic;
   padding: 0 10px;
 }
+
+html, body {
+  /* Empêche le rebond bizarre de la page au défilement sur iOS */
+  overflow-x: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  /* Permet un défilement fluide et naturel au doigt, typique d'iOS */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  /* S'adapte automatiquement à l'encoche de l'iPhone et à la barre du bas */
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  padding-top: env(safe-area-inset-top);
+}
+
+body {
+  /* Bloque le zoom automatique insupportable sur iPhone quand on clique partout */
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+  /* Empêche l'utilisateur de sélectionner le texte par erreur en cliquant vite */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.cat-btn, .option-btn {
+  /* Supprime le reflet gris moche au clic sur iOS */
+  -webkit-tap-highlight-color: transparent;
+}
