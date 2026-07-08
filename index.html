@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dopamine Diary ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.json">
+  
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <h1>✨ My Dopamine Diary ✨</h1>
+      <p class="subtitle">Nourris ton corps avec amour 🌸</p>
+    </header>
+
+    <section class="day-tracker">
+      <div class="date-picker-container">
+        <button id="prev-day-btn" class="time-btn">◀</button>
+        <span id="current-date-display" class="current-date">Aujourd'hui 🌸</span>
+        <button id="next-day-btn" class="time-btn">▶</button>
+      </div>
+      
+      <div class="progress-section">
+        <div class="progress-bar-container">
+          <div id="global-progress-bar" class="progress-bar" style="width: 0%;"></div>
+        </div>
+        <p id="progress-status-text" class="progress-text">C'est le début d'une belle journée ! 🌟</p>
+      </div>
+    </section>
+
+    <main class="main-content">
+      
+      <section class="meal-card" id="breakfast">
+        <div class="meal-header">
+          <h2>Breakfast Time ☕️</h2>
+          <span class="status-badge incomplete">Incomplet 📝</span>
+        </div>
+        <div class="category-list">
+          <button class="cat-btn" data-cat="proteine_matin"><span>🍗</span> Protéines du Matin <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="feculent_matin"><span>🌾</span> Féculents Fibres <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="lipide"><span>🥑</span> Matières Grasses <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="fruit"><span>🍏</span> Fruits <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="sucre"><span>🧁</span> Produit Sucré (Optionnel) <span class="check-mark"></span></button>
+        </div>
+      </section>
+
+      <section class="meal-card" id="lunch">
+        <div class="meal-header">
+          <h2>Lunch Time 🍱</h2>
+          <span class="status-badge incomplete">Incomplet 📝</span>
+        </div>
+        <div class="category-list">
+          <button class="cat-btn" data-cat="proteine"><span>🍗</span> Protéines <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="feculent"><span>🍚</span> Féculents <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="legume"><span>🥗</span> Légumes & Crudités <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="lipide"><span>🫒</span> Matières Grasses <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="laitier"><span>🥛</span> Produit Laitier <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="fruit"><span>🍓</span> Fruits <span class="check-mark"></span></button>
+        </div>
+      </section>
+
+      <section class="meal-card" id="snack">
+        <div class="meal-header">
+          <h2>Snack Time 🍓</h2>
+          <span class="status-badge incomplete">Incomplet 📝</span>
+        </div>
+        <div class="category-list">
+          <button class="cat-btn" data-cat="fruit"><span>🍏</span> Portion de Fruit <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="sucre"><span>🍫</span> Produit Sucré <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="lipide"><span>🥜</span> Oléagineux (Gras) <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="laitier"><span>🥛</span> Laitage léger <span class="check-mark"></span></button>
+        </div>
+      </section>
+
+      <section class="meal-card" id="dinner">
+        <div class="meal-header">
+          <h2>Dinner Time 🌙</h2>
+          <span class="status-badge incomplete">Incomplet 📝</span>
+        </div>
+        <div class="category-list">
+          <button class="cat-btn" data-cat="proteine"><span>🐟</span> Protéines <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="feculent"><span>🌾</span> Féculents (Plus léger) <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="legume"><span>🥗</span> Légumes & Crudités <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="lipide"><span>🫒</span> Matières Grasses <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="laitier"><span>🥛</span> Produit Laitier <span class="check-mark"></span></button>
+          <button class="cat-btn" data-cat="fruit"><span>🍏</span> Fruits <span class="check-mark"></span></button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="food-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Choisir mon aliment</h3>
+        <button class="close-modal-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-tip" id="modal-tip">Conseil...</p>
+        <div class="food-options-grid" id="food-options"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

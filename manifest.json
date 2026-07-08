@@ -1,0 +1,17 @@
+{
+  "name": "My Dopamine Diary",
+  "short_name": "Dopamine Diary",
+  "description": "Nourris ton corps avec amour 🌸",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#f4acb7",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5065/5065209.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
